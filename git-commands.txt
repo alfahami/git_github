@@ -68,3 +68,11 @@ Version Control System (VCS) for tracking changes in computer files.
           . $ git remote                                : List all the remote repositroy linked to git
           . $ git remote add origin <link remote repo>  : Adding the remote repository to git
           . $ git push -u origin master
+
+          Resolving non fast-forward
+          --------------------------
+
+          git fetch origin master:tmp
+          git rebase tmp
+          git push origin HEAD:master
+          git branch -D tmp
