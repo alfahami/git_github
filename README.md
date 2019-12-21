@@ -3,8 +3,6 @@
 #### Basic commands of pushing, pulling, merging, creating branches ... with Git & GitHub
 
 ## WHAT IS GIT
-   ___________
-
 Version Control System (VCS) for tracking changes in computer files.
 
           * Distributed version control
@@ -14,7 +12,6 @@ Version Control System (VCS) for tracking changes in computer files.
           * Local and remote repositories
 
 ## CONCEPTS OF GIT
-  ________________
 
           * Keeps track of code history
           * Takes 'snapshots' of your files
@@ -23,8 +20,9 @@ Version Control System (VCS) for tracking changes in computer files.
           * You can stage files before committing
 
 ## BASIC COMMANDS
-  _______________
-              ### On a local Repository
+
+             1- On a local Repository
+                ---------------------
 
             . $ git init                                : Initialize Local Git Repository
             . $ git add <file> |.(*.extension)          : Add file(s) to index | add all files(all with extension) to the staging area
@@ -35,12 +33,12 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git config --global user.email ''       : Add your email to git
             . $ git rm --cached version <file>          : Removing files from the stagin area
 
-            When there is changes that are not staged for commit:
-            _____________________________________________________
+              When there is changes that are not staged for commit:
             . $ git checkout --<file> ..            : Discrad changes in working directory
             . $ git add/rm                          : Update what will be committed
 
             2- On a remote Repository(GitHub, BitBucket)
+               -----------------------------------------
 
             . $ git push                            : Push to a remote repository
             . $ git pull                            : Pull latest from remote repository
@@ -61,8 +59,6 @@ Version Control System (VCS) for tracking changes in computer files.
           . $ git --set-upstream origin <branch name>: Set the <branch name> to track remote branch as origin
 
 ## GitHub
-   ______
-
           A free tool that lets you host your local repository eventually repositories.
 
           . $ git remote                                : List all the remote repositroy linked to git
