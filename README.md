@@ -61,9 +61,9 @@ Version Control System (VCS) for tracking changes in computer files.
 ## GitHub
           A free tool that lets you host your local repository eventually repositories.
 
-          . $ git remote                                : List all the remote repositroy linked to git
+          . $ git remote                                : List all the remote repositroy linked to gitote repository to git
 	  . $ git remote show origin : show the URL or the remote repo
-          . $ git remote add origin <link remote repo>  : Adding the remote repository to git
+          . $ git remote add origin <link remote repo>  : Adding the rem
           . $ git push -u origin master
 
           Resolving non fast-forward
