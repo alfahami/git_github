@@ -36,7 +36,7 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git rm --cached version <file>          : Removing files from the stagin area
 
             When there is changes that are not staged for commit:
-            ____________________________________________________
+            _____________________________________________________
             . $ git checkout --<file> ..            : Discrad changes in working directory
             . $ git add/rm                          : Update what will be committed
 
@@ -47,13 +47,9 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git clone                           : Clone a repository into a new directory
 
 ## .GITIGNORE
-    _________
-
             Contains all files and folders that we don't want to include in our repository at all.
 
 ## Branches
-   _________
-
           A branch is a lightweight movable pointer to one of these commit.
           Setting up a branch means creating a new pointer for you to move around.
           (master is the branch by default)
