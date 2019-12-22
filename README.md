@@ -32,6 +32,10 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git config --gloabl user.name ''        : Add your name to git
             . $ git config --global user.email ''       : Add your email to git
             . $ git rm --cached version <file>          : Removing files from the stagin area
+            . $ git config --global credential.helper store : make git store username and passowrd and it will never ask them
+            . $ git config --global credential.helper cache : save the username and password for a session (cache it)
+            . $ git config --global credential.helper 'cache --timeout=600' : setting a timeout for the above command
+              
 
               When there is changes that are not staged for commit:
             . $ git checkout --<file> ..            : Discrad changes in working directory
@@ -62,15 +66,26 @@ Version Control System (VCS) for tracking changes in computer files.
           A free tool that lets you host your local repository eventually repositories.
 
           . $ git remote                                : List all the remote repositroy linked to gitote repository to git
+          . $ git remote remove <name of remote>        : remove link remote
+          . $ git remote add origin <remote url>        : add remote a remote to git using https which will prompt credentials in every push
+          . $ git remote add origin git@github.com:username/repo.git   : add a new remote to git repo via ssh
+          . git remote set-url origin git@github.com:username/repo.git : update the url of origin remote using ssh instead of https
+          . $ git remote -v                             : verify new remote
           . $ git remote show origin                    : show the url or the remote repository
-          . $ git push -u origin master
+          . $ git push -u origin master                 : push changes to master branch
 
-          Resolving non fast-forward
+          Resolving non fast-forward : happens when we are trying to push to remote repository but has created a new file on remote which has not been pulled yet, let say Readme. In that case as the error says
           --------------------------
-
-          git fetch origin master:tmp
-          git rebase tmp
-          git push origin HEAD:master
-          git branch -D tmp
+          fast solution:
+          _____________
+          
+          . $ git pull origin 
+          
+          long solution:
+          _____________
+          . $ git fetch origin master:tmp
+          . $ git rebase tmp
+          . $ git push origin HEAD:master
+          . $ git branch -D tmp
 
 
