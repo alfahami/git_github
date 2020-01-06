@@ -56,10 +56,14 @@ Version Control System (VCS) for tracking changes in computer files.
           A branch is a lightweight movable pointer to one of these commit.
           Setting up a branch means creating a new pointer for you to move around.
           (master is the branch by default)
-
-          . $ git branch <name of the branch>         : Creates a new pointer to the same commit you're currently on.
-          . $ git checkout <name of branch>           : Switch to the branch <name of the branch>
-          . $ git merge <name of the branch>          : Merge the branch <name of the branch> to the master[Should be on master]
+                 
+          . $ git branch -a                           : List all branches in local and remote repositories
+          . $ git branch -r                           : List only remote branches
+          . $ git show-branch                         : List branches and their respective commits
+          . $ git branch <branch name>                : Creates a new pointer to the same commit you're currently on.
+          . $ git checkout <branch name>              : Switch to the branch <name of the branch>
+          . $ git merge <branch name>                 : Merge the branch <name of the branch> to the master[Should be on master]
+          . $ git push origin <branch name>           : creating remote branches
           . $ git branch -D <name of branch>          : Delete the branch <name of the branch>
           . $ git --set-upstream origin <branch name>: Set the <branch name> to track remote branch as origin
 
