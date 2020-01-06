@@ -26,7 +26,7 @@ Version Control System (VCS) for tracking changes in computer files.
 
             . $ git init                                : Initialize Local Git Repository
             . $ git add <file> |.(*.extension)          : Add file(s) to index | add all files(all with extension) to the staging area
-            .$ git reset HEAD add <file> |.(*.extension): Unstage a file | all files (all with extension) from the staging are
+            . $ git reset HEAD add <file> |.(*.extension): Unstage a file | all files (all with extension) from the staging are
             . $ git status                              : Check status of working tree
             . $ git commit                              : Commit changes to index
             . $ git commit -m 'message of the commit'   : skip the text editor commit message
