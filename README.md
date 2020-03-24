@@ -42,16 +42,19 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git checkout --<file> ..            : Discrad changes in working directory
             . $ git add/rm                          : Update what will be committed
 
-   2- On a remote Repository(GitHub, BitBucket)
-      -----------------------------------------
+   2- On a remote Repository(GitHub, BitBucket)\
+      -------------------------------------------------------------
 
             . $ git push                            : Push to a remote repository
             . $ git pull                            : Pull latest from remote repository
             . $ git clone                           : Clone a repository into a new directory
 
 ## .GITIGNORE
-   Contains all files and folders that we don't want to include in our repository at all.
-   Create a file ".gitignore" in the git folder and add any file or folder to be ignored in this file following pattern format, as described [documentation](https://git-scm.com/docs/gitignore)
+   Contains all files and folders that we don't want to include in our repository at all.\
+   Create a file ".gitignore" in the git folder and add any file or folder to be ignored in this file following pattern format, as described in the [documentation](https://git-scm.com/docs/gitignore) or [different ways of ignoring files](https://help.github.com/en/github/using-git/ignoring-files)
+   
+            * .gitignore can be added to the .gitignore file, so git won't track it but it is not recommanded
+            * It also possible the ignores to .git/info/exclude, a special checkout-local file that works just like .gitignore but does not show up in "git status" since it's in the .git folder.
 
 ## Branches
  A branch is a lightweight movable pointer to one of these commit.
@@ -80,8 +83,9 @@ Version Control System (VCS) for tracking changes in computer files.
           . $ git remote show origin                    : show the url or the remote repository
           . $ git push -u origin master                 : push changes to master branch
 
-         Resolving non fast-forward : happens when we are trying to push to remote repository but has created a new file on remote which has not been pulled yet, let say Readme. In that case as the error says
- --------------------------
+
+   * Resolving non fast-forward : happens when we are trying to push to remote repository but has created a new file on remote which has not been pulled yet, let say Readme. In that case as the error says
+   
           fast solution:
           _____________
           
