@@ -54,7 +54,7 @@ Version Control System (VCS) for tracking changes in computer files.
    Create a file ".gitignore" in the git folder and add any file or folder to be ignored in this file following pattern format, as described in the [documentation](https://git-scm.com/docs/gitignore) or [different ways of ignoring files](https://help.github.com/en/github/using-git/ignoring-files)
    
             * .gitignore can be added to the .gitignore file, so git won't track it but it is not recommanded
-            * It also possible the ignores to .git/info/exclude, a special checkout-local file that works just like .gitignore but does not show up in "git status" since it's in the .git folder.
+            * It also possible to add the ignores to .git/info/exclude, a special checkout-local file that works just like .gitignore but does not show up in "git status" since it's in the .git folder.
 
 ## Branches
  A branch is a lightweight movable pointer to one of these commit.
