@@ -83,6 +83,13 @@ Version Control System (VCS) for tracking changes in computer files.
           . $ git remote show origin                    : show the url or the remote repository
           . $ git push -u origin master                 : push changes to master branch
 
+## Re-fork a repository
+            When the upstream forked repo got added new entries to be merge in your own forked repo
+          . $ git remote add upstream <address of the repository you cloned from>
+          
+          Updating the fork:
+          . $ git fetch upstream
+          . $ git rebase upstream/master
 
    * Resolving non fast-forward : happens when we are trying to push to remote repository but has created a new file on remote which has not been pulled yet, let say Readme. In that case as the error says
    
