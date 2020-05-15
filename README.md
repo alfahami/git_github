@@ -85,9 +85,10 @@ Version Control System (VCS) for tracking changes in computer files.
 
 ## Re-fork a repository
             When the upstream forked repo got added new entries to be merge in your own forked repo
+            Linking local cloned repo to the original repo
           . $ git remote add upstream <address of the repository you cloned from>
           
-          Updating the fork:
+           Updating the fork:
           . $ git fetch upstream
           . $ git rebase upstream/master
 
