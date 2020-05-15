@@ -36,6 +36,8 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git config --global credential.helper store : make git store username and passowrd and it will never ask them
             . $ git config --global credential.helper cache : save the username and password for a session (cache it)
             . $ git config --global credential.helper 'cache --timeout=600' : setting a timeout for the above command
+            . $git revert <ommit_hash> : revert individual commit
+            . $git revert <oldest_commit_hash>..<latest_commit_hash> : reverts the commits between and including the specified commits.
 
 
      When there is changes that are not staged for commit:
