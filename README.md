@@ -36,8 +36,9 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git config --global credential.helper store : make git store username and passowrd and it will never ask them
             . $ git config --global credential.helper cache : save the username and password for a session (cache it)
             . $ git config --global credential.helper 'cache --timeout=600' : setting a timeout for the above command
-            . $git revert <ommit_hash> : revert individual commit
-            . $git revert <oldest_commit_hash>..<latest_commit_hash> : reverts the commits between and including the specified commits.
+            . $ git revert <ommit_hash> : revert individual commit
+            . $ git revert <oldest_commit_hash>..<latest_commit_hash> : reverts the commits between and including the specified commits.
+            . $ git rebase -i HEAD~x : delete a local commit, x is the nth number from last commit
 
 
      When there is changes that are not staged for commit:
@@ -50,6 +51,7 @@ Version Control System (VCS) for tracking changes in computer files.
             . $ git push                            : Push to a remote repository
             . $ git pull                            : Pull latest from remote repository
             . $ git clone                           : Clone a repository into a new directory
+            . $ git push origin +master             : Removing a commit already pushed remotely
 
 ## .GITIGNORE
    Contains all files and folders that we don't want to include in our repository at all.\
