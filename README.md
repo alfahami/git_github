@@ -64,7 +64,8 @@ Version Control System (VCS) for tracking changes in computer files.
  A branch is a lightweight movable pointer to one of these commit.
  Setting up a branch means creating a new pointer for you to move around.
  (master is the branch by default)
-
+            
+          . $ git branch -b <branch name>             : Create and switch to branch name |= git branch <branch name> & git checkout <branch name>  
           . $ git branch -a                           : List all branches in local and remote repositories
           . $ git branch -r                           : List only remote branches
           . $ git show-branch                         : List branches and their respective commits
