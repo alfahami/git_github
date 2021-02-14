@@ -111,6 +111,57 @@ Version Control System (VCS) for tracking changes in computer files.
           . $ git push origin HEAD:master
           . $ git branch -D tmp
 
+## Adding SSH to Github
+
+       * Checking for existing ssh keys
+              $ ls -al ~/.ssh
+              # Lists the files in your .ssh directory, if they exist 
+
+       * Check the directory listing to see if you already have a public SSH key. By default, the filenames of the public keys are one of the following:
+              $ id_rsa.pub, id_ecdsa.pub, id_ed25519.pub
+ 
+       * If you don't have or wish to set up a new one, then
+         
+         * Generate an ssh key by:
+              $ ssh-keygen -t ed25519 -C "your_email@example.com"
+
+
+              Note: If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+                     $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+       
+       * This creates a new ssh key, using the provided email as a label. 
+              $ Generating public/private ed25519 key pair.
+
+       * When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+              $ > Enter a file in which to save the key (/home/you/.ssh/id_ed25519): [Press enter]
+       
+       * At the prompt, type a secure passphrase. 
+              $ > Enter passphrase (empty for no passphrase): [Type a passphrase]
+                > Enter same passphrase again: [Type passphrase again] 
+       
+       * Adding you SSH key to the ssh-agent
+              $ Start the ssh-agent in the background.
+                     $ eval "$(ssh-agent -s)"  
+                     > Agent pid 59566
+       
+       * Add your SSH private key to the ssh-agent. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_ed25519 in the command with the name of your private key file.
+                     $ ssh-add ~/.ssh/id_ed25519 
+       
+       * Add the SSH key to Github
+
+              * Copy the SSH public key to your clipboard.
+                     $ $ sudo apt-get install xclip
+                     $ xclip -selection clipboard < ~/.ssh/id_ed25519.pub
+                     # Copies the contents of the id_ed25519.pub file to your clipboard
+       
+              * Login to Github, at the upper-right corner of any page, click your profile photo, then click Settings
+               
+              * In the user settings sidebar, click __SSH and GPG keys__.
+              * Click New SSH key or __Add SSH key__.  
+              * Paste your key into the "Key" field. 
+              * Click Add SSH key. 
+              * If prompted, confirm your GitHub password. 
+
 ## Transfer a gist (gistrepo) to github (ghrepo)
 
        * Clone the gist
@@ -132,7 +183,7 @@ Version Control System (VCS) for tracking changes in computer files.
               . git puhs github master    #To GitHub
                . git push gist master     #To Gist
 
-       * Rename the remote aand get rid of gist
+       * Rename the remote and get rid of gist
               . git remote rename origin gist    
               . git rename github origin
               . git remote remove gist
