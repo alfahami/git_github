@@ -111,4 +111,29 @@ Version Control System (VCS) for tracking changes in computer files.
           . $ git push origin HEAD:master
           . $ git branch -D tmp
 
+## Transfer a gist (gistrepo) to github (ghrepo)
+
+       * Clone the gist
+              . git clone https://gist.github.com/gistrepo
+       
+       * Rename the cloned directory
+              . mv gistrepo/ gist-github
+
+       * Change the working directory to the newly renamed directory  
+              . cd gist-github/
+
+       * Add the github repository as a remote to your checked out gist repo
+              . git remote add github https://github.com/ghrepo
+
+       * Push to the new repository
+              . git push github master
+
+       * Sync changes form gist to github
+              . git puhs github master    #To GitHub
+               . git push gist master     #To Gist
+
+       * Rename the remote aand get rid of gist
+              . git remote rename origin gist    
+              . git rename github origin
+              . git remote remove gist
 
