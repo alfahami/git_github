@@ -165,7 +165,7 @@ Updating the fork:
 
 * Add the SSH key to Github
 
-  * Copy the SSH public key to your clipboard.
+       Copy the SSH public key to your clipboard.
          
        $ $ sudo apt-get install xclip
        $ xclip -selection clipboard < ~/.ssh/id_ed25519.pub
