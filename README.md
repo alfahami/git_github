@@ -1,6 +1,6 @@
 # Git & GitHub
 
-#### Basic commands of pushing, pulling, merging, creating branches ... with Git & GitHub
+#### Basic commands of pushing, pulling, merging, creating branches, adding ssh key to github, gist to github ... with Git & GitHub
 
 ## WHAT IS GIT
 Version Control System (VCS) for tracking changes in computer files.
