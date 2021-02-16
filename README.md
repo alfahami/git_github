@@ -29,7 +29,8 @@ Version Control System (VCS) for tracking changes in computer files.
        $ git reset HEAD add <file> |.(*.extension): Unstage a file | all files (all with extension) from the staging are
        $ git status                              : Check status of working tree
        $ git commit                              : Commit changes to index
-       $ git commit -m 'message of the commit'   : skip the text editor commit message
+       $ git commit -m 'message of the commit'   : Commit with message and skip opening the default text editor for entering a commit message
+       $ git commit -a --allow-empty-message -m '' : Commit with no commit message
        $ git config --gloabl --user.name ''        : Add your name to git
        $ git config --global --user.email ''       : Add your email to git
        $ git rm --cached version <file>          : Removing files from the stagin area
