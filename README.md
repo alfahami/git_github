@@ -21,8 +21,7 @@ Version Control System (VCS) for tracking changes in computer files.
 
 ## BASIC COMMANDS
 
-1- On a local Repository
----------------------
+### 1- On a local Repository
 
        $ git init                                : Initialize Local Git Repository
        $ git add <file> |.(*.extension)          : Add file(s) to index | add all files(all with extension) to the staging area
@@ -46,8 +45,8 @@ Version Control System (VCS) for tracking changes in computer files.
        $ git checkout --<file> ..            : Discrad changes in working directory
        $ git add/rm                          : Update what will be committed
 
-   2- On a remote Repository(GitHub, BitBucket)\
-      -------------------------------------------------------------
+   ### 2- On a remote Repository(GitHub, BitBucket, ...)\
+      
 
        $ git push                            : Push to a remote repository
        $ git pull                            : Pull latest from remote repository
