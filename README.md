@@ -45,7 +45,7 @@ Version Control System (VCS) for tracking changes in computer files.
        $ git checkout --<file> ..            : Discrad changes in working directory
        $ git add/rm                          : Update what will be committed
 
-   ### 2- On a remote Repository(GitHub, BitBucket, ...)\
+   ### 2- On a remote Repository(GitHub, BitBucket, ...)
       
 
        $ git push                            : Push to a remote repository
@@ -105,12 +105,12 @@ Updating the fork:
    * Resolving non fast-forward : happens when we are trying to push to remote repository but has created a new file on remote which has not been pulled yet, let say Readme. In that case as the error says
    
        - Fast solution:
-       _______________
+       
 
               $ git pull origin 
 
        - Long solution:
-       _______________
+
 
               $ git fetch origin master:tmp
               $ git rebase tmp
@@ -145,11 +145,11 @@ Updating the fork:
 
 * When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
       
-      $ > Enter a file in which to save the key (/home/you/.ssh/id_ed25519): [Press enter]
+      $ Enter a file in which to save the key (/home/you/.ssh/id_ed25519): [Press enter]
 
 * At the prompt, type a secure passphrase. 
       
-      $ > Enter passphrase (empty for no passphrase): [Type a passphrase]
+      $ Enter passphrase (empty for no passphrase): [Type a passphrase]
         > Enter same passphrase again: [Type passphrase again] 
 
 * Adding you SSH key to the ssh-agent
