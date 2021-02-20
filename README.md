@@ -102,21 +102,6 @@ Updating the fork:
 
        $ git rebase upstream/master
 
-   * Resolving non fast-forward : happens when we are trying to push to remote repository but has created a new file on remote which has not been pulled yet, let say Readme. In that case as the error says
-   
-       - Fast solution:
-       
-
-              $ git pull origin 
-
-       - Long solution:
-
-
-              $ git fetch origin master:tmp
-              $ git rebase tmp
-              $ git push origin HEAD:master
-              $ git branch -D tmp
-
 ## Adding SSH to Github
 
 * Checking for existing ssh keys
