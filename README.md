@@ -66,6 +66,7 @@ Version Control System (VCS) for tracking changes in computer files.
  (master is the branch by default)
             
        $ git branch -b <branch name>             : Create and switch to branch name |= git branch <branch name> & git checkout <branch name>  
+       $ git rev-parse --abbrev-ref HEAD          : List the current branch you're on without other branches 
        $ git branch -a                           : List all branches in local and remote repositories
        $ git branch -r                           : List only remote branches
        $ git show-branch                         : List branches and their respective commits
