@@ -77,6 +77,12 @@ Version Control System (VCS) for tracking changes in computer files.
        $ git branch -D <name of branch>          : Delete the branch <name of the branch>
        $ git --set-upstream origin <branch name>: Set the <branch name> to track remote branch as origin
 
+       $ git push --set-upstream origin branch-local-name : Pushes the current branch and set it as the remote upstream.
+       To use when the branch only exists locally. 
+
+    
+
+
 ## GitHub
 
  A free tool that lets you host your local repository eventually repositories.
