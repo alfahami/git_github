@@ -198,3 +198,30 @@ Updating the fork:
        git rename github origin
        git remote remove gist
 
+## Git Large File Storage
+
+An open source Git extension for versioning large files
+Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
+
+- Download and install:
+   - [Download file - windows/linux](https://github.com/git-lfs/git-lfs/releases/download/v3.1.2/git-lfs-linux-amd64-v3.1.2.tar.gz) extract it with `tar xvzf file_git_large_file.tar.gz && cd file_git_large_file/ && sudo ./install.sh`
+
+- Commands
+  
+  - `git lfs install` : set up Git LFS for the user account, to be run once per user.
+  - `git lfs track "*.psd"` select all psd files types to be managed by Git LFS, this can also be done by directly editing .gitattributes
+  - `git add .gitattributes` update the gitattributes (make sure .gitattributes is tracked)
+
+- Note that defining the file types Git LFS should track will not, by itself, convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history. To do that, use the git lfs migrate[1] command:
+  - `git lfs migrate import --include="*.ipynb"` convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history 
+- There is no step three. Just commit and push to GitHub as you normally would;
+
+
+
+
+
+
+
+
+
+  
