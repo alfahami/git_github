@@ -214,7 +214,7 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
 
 - Note that defining the file types Git LFS should track will not, by itself, convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history. To do that, use the git lfs migrate[1] command:
   - `git lfs migrate import --include="*.ipynb"` convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history 
-- There is no step three. Just commit and push to GitHub as you normally would;
+- There is no more step. Just commit and push to GitHub as you normally would;
 
 
 
