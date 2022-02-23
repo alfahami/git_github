@@ -96,6 +96,24 @@ Version Control System (VCS) for tracking changes in computer files.
        $ git remote show origin                    : show the url or the remote repository
        $ git push -u origin master                 : push changes to master branch
 
+## Revert a commit pushed remotely
+
+Reverting a commit means creating a new commit that undoes all changes that were made the bad commit which doesn't have to be the last one. The bad commit might remain  but it won't affect the current master or any further commit. To so, we use:
+
+`git revert {commit_id}`
+
+### Deleting the last commit
+This is the easiest way. Let's say we have a remote origin with branch master that currently points to commit dd61ab32. We want to remove the top commit. Translated to git terminology, we want to force the master branch of the origin remote repository to the parent of dd61ab32:
+
+`git push origin +dd61ab32^:master`
+
+Where git interprets x^ as the parent of x and + as a forced non-fastforward push. If you have the master branch checked out locally, you can also do it in two simpler steps: First reset the branch to the parent of the current commit, then force-push it to the remote.
+
+`git reset HEAD^ --hard`
+
+`git push origin -f`
+
+
 ## Re-fork a repository
       
 When the upstream forked repo got added new entries to be merge in your own forked repo
