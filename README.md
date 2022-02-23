@@ -113,6 +113,8 @@ Where git interprets x^ as the parent of x and + as a forced non-fastforward pus
 
 `git push origin -f`
 
+[Git HowTo: revert a commit already pushed to a remote repository](https://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html)
+
 
 ## Re-fork a repository
       
