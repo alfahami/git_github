@@ -102,6 +102,13 @@ Reverting a commit means creating a new commit that undoes all changes that were
 
 `git revert {commit_id}`
 
+## Revert a git repository to a previous commit
+`
+git revert --no-commit 0766c053..HEAD
+git commit
+git push # if you want to push in a remote repo
+`
+
 ### Deleting the last commit
 This is the easiest way. Let's say we have a remote origin with branch master that currently points to commit dd61ab32. We want to remove the top commit. Translated to git terminology, we want to force the master branch of the origin remote repository to the parent of dd61ab32:
 
