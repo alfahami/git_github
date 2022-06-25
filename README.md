@@ -96,6 +96,26 @@ Version Control System (VCS) for tracking changes in computer files.
        $ git remote show origin                    : show the url or the remote repository
        $ git push -u origin master                 : push changes to master branch
 
+## Merge a pull request
+
+
+######Step 1: Clone the repository or update your local repository with the latest changes.
+
+- `git pull origin main`
+  
+
+######Step 2: Switch to the base branch of the pull request.
+
+- `git checkout main`
+  
+######Step 3: Merge the head branch into the base branch.
+
+- `git merge <branch-name>`
+  
+######Step 4: Push the changes.
+
+- `git push -u origin main`
+
 ## Revert a commit pushed remotely
 
 Reverting a commit means creating a new commit that undoes all changes that were made the bad commit which doesn't have to be the last one. The bad commit might remain  but it won't affect the current master or any further commit. To so, we use:
@@ -248,6 +268,7 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
 - Note that defining the file types Git LFS should track will not, by itself, convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history. To do that, use the git lfs migrate[1] command:
   - `git lfs migrate import --include="*.ipynb"` convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history 
 - There is no more step. Just commit and push to GitHub as you normally would;
+
 
 
 
