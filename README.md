@@ -99,20 +99,20 @@ Version Control System (VCS) for tracking changes in computer files.
 ## Merge a pull request
 
 
-######Step 1: Clone the repository or update your local repository with the latest changes.
+###### Step 1: Clone the repository or update your local repository with the latest changes.
 
 - `git pull origin main`
   
 
-######Step 2: Switch to the base branch of the pull request.
+###### Step 2: Switch to the base branch of the pull request.
 
 - `git checkout main`
   
-######Step 3: Merge the head branch into the base branch.
+###### Step 3: Merge the head branch into the base branch.
 
 - `git merge <branch-name>`
   
-######Step 4: Push the changes.
+###### Step 4: Push the changes.
 
 - `git push -u origin main`
 
@@ -141,6 +141,40 @@ Where git interprets x^ as the parent of x and + as a forced non-fastforward pus
 `git push origin -f`
 
 [Git HowTo: revert a commit already pushed to a remote repository](https://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html)
+
+## Ways of resolving _ git push rejected non-fastforward_ errors
+
+Start with a `git pull` or `git pull origin`
+
+Probably you did not fetch the remote changes before the rebase or someone pushed new changes (while you were rebasing and trying to push). Try these steps:
+       `#fetching remote 'feature/my_feature_branch' branch to the 'tmp' local branch 
+       git fetch origin feature/my_feature_branch:tmp
+
+       #rebasing on local 'tmp' branch
+       git rebase tmp
+
+       #pushing local changes to the remote
+       git push origin HEAD:feature/my_feature_branch
+
+       #removing temporary created 'tmp' branch
+       git branch -D tmp
+       `
+ Another approach would be:
+       It looks, that someone pushed new commits between your last git fetch and git push. In this case you need to repeat your steps and rebase my_feature_branch one more time.
+
+       git fetch
+       git rebase feature/my_feature_branch
+       git push origin feature/my_feature_branch
+       After the git fetch I recommend to examine situation with gitk --all.
+ 
+ A last approach :
+ 
+       git fetch origin master:tmp
+       git rebase tmp
+       git push origin HEAD:master
+       git branch -D tmp
+      
+Get more approaches [here](https://stackoverflow.com/questions/20467179/git-push-rejected-non-fast-forward)
 
 
 ## Re-fork a repository
