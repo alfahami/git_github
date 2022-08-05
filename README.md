@@ -30,8 +30,8 @@ Version Control System (VCS) for tracking changes in computer files.
        $ git commit                              : Commit changes to index
        $ git commit -m 'message of the commit'   : Commit with message and skip opening the default text editor for entering a commit message
        $ git commit -a --allow-empty-message -m '' : Commit with no commit message
-       $ git config --gloabl --user.name ''        : Add your name to git
-       $ git config --global --user.email ''       : Add your email to git
+       $ git config --gloabl user.name ''        : Add your name to git
+       $ git config --global user.email ''       : Add your email to git
        $ git rm --cached version <file>          : Removing files from the stagin area
        $ git config --global credential.helper store : make git store username and passowrd and it will never ask them
        $ git config --global credential.helper cache : save the username and password for a session (cache it)
