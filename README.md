@@ -116,6 +116,40 @@ Version Control System (VCS) for tracking changes in computer files.
 
 - `git push -u origin main`
 
+## Git stash 
+
+Use `git stash` when you want to record the current state of the working directory and the index, but want to go back to a clean working directory.
+
+`git stash pop` will take the content from the stash file and then apply those changes to our current working file.
+
+The best way to deal with stashes, first check the list of stash with
+
+      git stash list
+
+and then identify and confirm if there's a stash of your concern then go with
+
+      git stash drop
+
+and it will delete the stashes one by one (starts from top)
+
+      git stash drop <index>
+
+it'll delete a stash on a specific index i.e 5
+
+but if sure that nothing in that list in needed then we can go for
+
+      git stash clear
+
+and it'll remove all of the them.
+
+
+
+## Revert a git repository to a previous commit
+`
+git revert --no-commit 0766c053..HEAD
+git commit
+git push # if you want to push in a remote repo
+
 ## Revert a commit pushed remotely
 
 Reverting a commit means creating a new commit that undoes all changes that were made the bad commit which doesn't have to be the last one. The bad commit might remain  but it won't affect the current master or any further commit. To so, we use:
