@@ -142,6 +142,17 @@ but if sure that nothing in that list in needed then we can go for
 
 and it'll remove all of the them.
 
+In short
+
+       git stash           // create stash,
+       git stash push -m "message" // create stash with msg,
+       git stash apply         // to apply stash,
+       git stash apply indexno // to apply  specific stash, 
+       git stash list          //list stash,
+       git stash drop indexno      //to delete stash,
+       git stash pop indexno,
+       git stash pop = stash drop + stash apply
+       git stash clear         //clear all your local stashed code
 
 
 ## Revert a git repository to a previous commit
