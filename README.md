@@ -175,6 +175,16 @@ git commit
 git push # if you want to push in a remote repo
 `
 
+## Removing files from the staging area
+Below git command will remove all files from staging area
+
+       git restore --staged .
+
+Or simply you can
+
+       git restore -S .
+
+
 ### Deleting the last commit
 This is the easiest way. Let's say we have a remote origin with branch master that currently points to commit dd61ab32. We want to remove the top commit. Translated to git terminology, we want to force the master branch of the origin remote repository to the parent of dd61ab32:
 
