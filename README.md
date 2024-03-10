@@ -156,6 +156,27 @@ In short
        git stash pop = stash drop + stash apply
        git stash clear         //clear all your local stashed code
 
+## Git prune
+
+ Command is an internal housekeeping utility that cleans up unreachable or "orphaned" Git objects.
+
+      git prune
+      git fetch --all --prune : clean all outdated remotes branches
+
+## Git aliases
+
+ It is possible to create aliases with git.
+ Configuring the global file, `$HOME/.gitconfig` or in active git repo at `.git/config`
+ The config files will respect an [alias] section that looks like:
+
+       [alias]
+        co = checkout
+
+the git config command is a convenient utility to quickly create aliases. 
+
+
+       git config --global alias.co checkout
+
 
 ## Revert a git repository to a previous commit
 `
