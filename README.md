@@ -206,6 +206,55 @@ Or simply you can
 
        git restore -S .
 
+## Commit Message Convention
+Using a **commit message convention** keeps your Git history clean, structured, and easy to read. One of the most widely used conventions is the **Conventional Commits** format.  
+
+---
+
+## Commit Message Structure
+A commit message follows this pattern:  
+
+```
+<type>(<scope>): <short description>
+
+[optional body]
+[optional footer]
+```
+
+### Commit Types
+| Type       | Purpose |
+|------------|---------|
+| **feat**   | Introduces a new feature |
+| **fix**    | Fixes a bug |
+| **refactor** | Code change that doesn’t fix a bug or add a feature |
+| **chore**  | Maintenance tasks (e.g., updating dependencies) |
+| **docs**   | Documentation updates (e.g., README changes) |
+| **test**   | Adds or updates tests |
+| **style**  | Formatting (e.g., spaces, indentation, no code changes) |
+| **perf**   | Performance improvements |
+| **ci**     | Changes to CI/CD pipeline |
+| **build**  | Changes affecting the build system or dependencies |
+
+---
+
+### 2 Examples for Your Use Case
+#### 🛠 Adding a new repository method
+**feat(holding): Add method to fetch holdings by portfolio ID**  
+**repo: Implement findByPortfolioId query in HoldingRepository**  
+
+#### 🐞 Fixing a bug
+**fix(holding): Correct holdings retrieval by portfolio ID**  
+**fix(portfolio): Resolve NPE when fetching holdings**  
+
+#### ♻️ Code refactoring
+**refactor(repository): Improve query performance for holdings lookup**  
+
+---
+
+### Best Practices
+ **Use imperative mood** (e.g., "Add method" instead of "Added method")  
+**Keep messages concise** (less than 50 characters in the title)  
+**Provide context in the body** (if necessary)  
 
 ### Deleting the last commit
 This is the easiest way. Let's say we have a remote origin with branch master that currently points to commit dd61ab32. We want to remove the top commit. Translated to git terminology, we want to force the master branch of the origin remote repository to the parent of dd61ab32:
@@ -380,14 +429,3 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
 - Note that defining the file types Git LFS should track will not, by itself, convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history. To do that, use the git lfs migrate[1] command:
   - `git lfs migrate import --include="*.ipynb"` convert any pre-existing files to Git LFS, such as files on other branches or in your prior commit history 
 - There is no more step. Just commit and push to GitHub as you normally would;
-
-
-
-
-
-
-
-
-
-
-  
